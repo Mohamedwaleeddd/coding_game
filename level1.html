@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  <style>
+     * {
+     font-family:'Work Sans', Sans ;
+     padding:0;
+     margin:0;
+   }
+     .fr {
+     width: 100%;
+     height: 150px;
+   }
+   textarea {
+     background-image: url(/animated-background-of-space-adventure-with-copy-space-area-suitable-for-children-product-etc-free-video.jpg);
+     background-size: 100%;
+     width: 300px;
+     height: 100px;
+     color: white;
+     border:none;
+     text-align: center;
+   }
+   button{
+     background: dodgerblue;
+     color: white;
+     border:none;
+     width: 70px;
+     height: 20px;
+     font-size: 12px;
+     border-radius: 7px;
+   }
+   ::placeholder {
+     font-size: 10px;
+     color:white;
+   }
+   body{
+      background-image: url(home.jpg);
+      background-size: 100%;
+    }
+   .cont {
+     display:flex;
+     align-items:center;
+     margin-top: 170px;
+     background-image: url(bg.jpg);
+     background-size: 80%;
+     height: 200px;
+   }
+   #coin{
+     margin-top: 50px;
+     margin-left: 190px;
+     position:absolute;
+   }
+  </style>
+</head>
+<body>
+  <div class="cont">
+    <img src="car.png" onclick="car();" id="car" width="250px">
+    <img src="coin.png" onclick="car();"id="coin" width="70px">
+  </div>
+  <div class="fr">
+    <br>
+    <center>
+      <textarea placeholder=" Type Your Code Here.." id="code"></textarea>
+      <br>
+      <button onclick="submitCode()">Submit</button>
+    <br>
+    <br>
+    </center>
+  </div>
+  <script>
+  window.alert("Write a code to move the car 100px left");
+    function car() {
+      const car = document.querySelector('#car');
+      const coin = document.querySelector('#coin');
+      car.style.transform = "translateX(100px)";
+    }
+
+    function submitCode() {
+      const codeInput = document.querySelector('#code').value;
+
+      if (codeInput === 'on start => move left 100px') {
+        car();
+      window.location.href ="index.html";
+        alert("You is a super coder!");
+      } else {
+        alert("Try again");
+      }
+    }
+  </script>
+</body>
+</html>
